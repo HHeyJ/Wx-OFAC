@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>Wx-OFAC</artifactId>
+        <groupId>com.hyq.wx</groupId>
+        <version>${ofacVersion}</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>wx-core</artifactId>
+
+    <!--  依赖管理  -->
+    <dependencies>
+        <dependency>
+            <groupId>com.hyq.wx</groupId>
+            <artifactId>wx-dao</artifactId>
+            <version>${ofacVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.hyq.wx</groupId>
+            <artifactId>wx-client</artifactId>
+            <version>${ofacVersion}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <classifier>exec</classifier>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>
